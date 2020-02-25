@@ -1,14 +1,16 @@
 <!DOCTYPE html>
 <html>
 <head>
+  <link rel="stylesheet" href="fontawesome/css/font-awesome.min.css">
 <style>
 body {
 	margin:0;
 	font-family: "Roboto",sans-serif;
 	background-color: white;
+  color: white;
 }
 
-ul {
+.nav {
   list-style-type: none;
   height: 70px;
   margin: 0;
@@ -20,15 +22,15 @@ ul {
   width: 100%;
 }
 
-li {
+.nav li {
     float: left;
 }
 
-li .search{
+.nav li .search{
    float: right; 
 }
 
-li a {
+.nav li a {
   display: block;
   color: white;
   text-align: center;
@@ -36,7 +38,7 @@ li a {
   text-decoration: none;
 }
 
-li a:hover:not(.active) {
+.nav li a:hover:not(.active) {
   background-color: #111;
 }
 
@@ -52,7 +54,7 @@ li a:hover:not(.active) {
 }
 
 .container {
-	background-color: red;
+	background-color: #e0e0e0;
   padding-right: 15px;
   padding-left: 15px;
   margin-right: auto;
@@ -91,7 +93,7 @@ li a:hover:not(.active) {
 }
 
 .grid-container-1 > div {
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: black;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -101,7 +103,6 @@ li a:hover:not(.active) {
 .grid-container-2 > div {
   background-color:gray;
   text-align: center;
-  padding: 20px 0;
   font-size: 30px;
 }
 
@@ -111,9 +112,10 @@ li a:hover:not(.active) {
 }
 
 img {
-    max-width: 100%;
-    height: auto;
-}
+width: 100%;
+    height: 100%;
+    object-fit: cover;
+    overflow: hidden;}
 
 .search{ 
   color: white;
@@ -125,6 +127,76 @@ img {
   box-sizing: border-box;
   background-color: rgba(255,255,255,0.5);
 }
+
+#image{
+  line-height: 1.5em;
+}
+
+.title{
+ text-shadow: 2px 2px 8px black;
+  font-size: 20px;
+  }
+
+.time{
+    background-color: deeppink;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: 2px;
+    left: 5px;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+
+.quality{
+    background-color: red;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.rating{
+    background-color: rgba(0,0,0,0.5);
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+i{
+  color: gold;
+}
+
+.status{
+    background-color: green;
+    color: white;
+    font-size: 15px;
+    position: absolute;
+    bottom: 2px;
+    right: 5px;
+    padding: 2px;
+    border-radius: 6px;
+}
+
+.col{
+  height: 300px;
+   position: relative;
+  text-align: center;
+  color: white;
+}
+
+.col:hover{
+  color: deeppink;
+}
+
 
 /*.col {
     width: 120px;
@@ -141,7 +213,7 @@ img {
 <body>
 
 <div>
-	<ul>
+	<ul class="nav">
 	  <li><a class="brand" href="">HeadOut</a></li>
 	  <li><a href="">News</a></li>
 	  <li><a href="">Contact</a></li>
@@ -152,27 +224,88 @@ img {
 
 
 <div class="grid-container-1">
-  <div class="item1">
+  <div class="item1 pics">
   	Featured Videos
   	<div class="grid-container-2">
-  		<div class="col"><img src="images/t1.jpg">Black Panther</div>
-  		<div class="col"><img src="images/t2.jpg">Guardians of The Galaxy</div>
-  		<div class="col"><img src="images/t3.jpg">Assasin</div>
-  		<div class="col"><img src="images/t4.jpg">Shazam</div>
+  		<div class="col">
+        <img src="images/t1.jpg">
+          <div class="title">Black Panther</div>
+          <div class="time">2:00:00</div>
+          <div class="status">Featured</div>
+          <div class="quality">1080p</div>
+
+      </div>
+  		<div class="col">
+        <img src="images/t2.jpg">
+          <div class="title">Blade Runner</div>
+          <div class="time">2:00:00</div>
+          <div class="status">Featured</div>
+          <div class="quality">1080p</div>
+
+      </div>
+  		<div class="col">
+        <img src="images/t3.jpg">
+          <div class="title">Assasin</div>
+          <div class="time">2:00:00</div>
+          <div class="status">Featured</div>
+          <div class="quality">1080p</div>
+
+      </div>
+  		<div class="col">
+        <img src="images/t4.jpg">
+          <div class="title">Shazam</div>
+          <div class="time">2:00:00</div>
+          <div class="status">Featured</div>
+          <div class="quality">1080p</div>
+
+      </div>
   	</div>
   </div>
-  <div class="item2">2</div>
+  <div class="item2">
+    <ul id="image">
+      <div>Categories</div>
+      <li>Action</li>
+      <li>Adventure</li>
+      <li>Love</li>
+      <li>Mystery</li>
+      <li>Fantasy</li>
+    </ul>
+  </div>
 </div>
 
 
 <div class="grid-container-1">
   <div class="item1">
-    Trending Videos
+    High Rated Videos
     <div class="grid-container-2">
-      <div class="col"><img src="images/t1.jpg"></div>
-      <div class="col"><img src="images/t2.jpg"></div>
-      <div class="col"><img src="images/t3.jpg"></div>
-      <div class="col"><img src="images/t4.jpg"></div>
+        <div class="col">
+            <img src="images/t4.jpg">
+              <div class="title">Shazam</div>
+              <div class="time">2:00:00</div>
+              <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>9.5</div>
+              <div class="quality">1080p</div>
+        </div>
+        <div class="col">
+            <img src="images/t4.jpg">
+              <div class="title">Shazam</div>
+              <div class="time">2:00:00</div>
+              <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>9.2</div>
+              <div class="quality">1080p</div>
+        </div>
+        <div class="col">
+            <img src="images/t4.jpg">
+              <div class="title">Shazam</div>
+              <div class="time">2:00:00</div>
+              <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>9.0</div>
+              <div class="quality">1080p</div>
+        </div>
+        <div class="col">
+            <img src="images/t4.jpg">
+              <div class="title">Shazam</div>
+              <div class="time">2:00:00</div>
+              <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>8.9</div>
+              <div class="quality">1080p</div>
+        </div>
     </div>
   </div>
   <div class="item2">2</div>
