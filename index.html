@@ -11,7 +11,7 @@ body {
 }
 
 .nav {
-  box-shadow: 0px 1px 50px black;
+  box-shadow: 0px 1px 50px #0000004a;
   list-style-type: none;
   height: 70px;
   margin: 0;
@@ -40,7 +40,7 @@ body {
 }
 
 .nav li a:hover:not(.active) {
-  background-color: #111;
+  color: orangered;
 }
 
 .active {
@@ -48,8 +48,7 @@ body {
 }
 
 .brand{
-	background-color: #ccccc;
-    color: white;
+	
     font-family: fantasy;
     font-size: 30px;
     padding: 18px;
@@ -196,8 +195,8 @@ i{
 }
 
 .col:hover{
-  color: red;
-  text-shadow: 2px 2px 10px black;
+  color: orangered;
+  text-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
 .vert_nav ul {
@@ -206,7 +205,7 @@ i{
   list-style-type: none;
   margin: 0;
   padding: 10px;
-  width: 100%;
+  width: 90%;
   height: 100%
   background-color: #f1f1f1;
 }
@@ -222,7 +221,7 @@ i{
 /* Change the link color on hover */
 .vert_nav li a:hover {
   background-color: white;
-  color: black;
+  color: orangered;
 }
 
 table{
@@ -238,7 +237,14 @@ td{
 }
 
 td:hover{
-  background-color: white; 
+  background-color: white;
+  color: orangered; 
+}
+
+.head{
+      text-align: left;
+    margin-left: 10px;
+
 }
 /*.col {
     width: 120px;
@@ -256,10 +262,12 @@ td:hover{
 
 <div>
 	<ul class="nav">
-	  <li><a class="brand" href="">HeadOut</a></li>
-	  <li><a href="">News</a></li>
-	  <li><a href="">Contact</a></li>
-	  <li><a href="">About</a></li>
+	  <li><a class="brand" style="padding: 15px; color: orangered;" href="">HeadOut</a></li>
+	  <li><a href="">Home</a></li>
+	  <li><a href="">Trending</a></li>
+	  <li><a href="">Downloads</a></li>
+    <li><a href="">History</a></li>
+    <li><a href="">About</a></li>
     <li><input class="search" type="text" placeholder="Search"></li>
 	</ul>
 </div>
@@ -267,7 +275,7 @@ td:hover{
 
 <div class="grid-container-1">
   <div class="item1 pics">
-  	Featured Videos
+  	<div class="head">Featured Videos</div>
   	<div class="grid-container-2">
   		<div class="col">
         <img src="images/t1.jpg">
@@ -304,7 +312,7 @@ td:hover{
   	</div>
   </div>
   <div class="item2 vert_nav">
-    Genres
+    <div class="head">Genres</div>
     <ul>
       <li><a href="#home"><i class="fa fa-caret-right" aria-hidden="true"></i>
 Action</a></li>
@@ -327,7 +335,7 @@ Comedy</a></li>
 
 <div class="grid-container-1">
   <div class="item1">
-    High Rated Videos
+    <div class="head">High Rated Videos</div>
     <div class="grid-container-2">
         <div class="col">
             <img src="images/t5.jpg">
@@ -360,7 +368,7 @@ Comedy</a></li>
     </div>
   </div>
   <div class="item2">
-    Years
+    <div class="head">Years</div>
     <table>
       <tr>
         <td>2019</td>
