@@ -7,16 +7,17 @@ body {
 	margin:0;
 	font-family: "Roboto",sans-serif;
 	background-color: white;
-  color: white;
+  color: black;
 }
 
 .nav {
+  box-shadow: 0px 1px 50px black;
   list-style-type: none;
   height: 70px;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #333;
+  background-color: white;
   position: sticky;
   top: 0;
   width: 100%;
@@ -32,7 +33,7 @@ body {
 
 .nav li a {
   display: block;
-  color: white;
+  color: black;
   text-align: center;
   padding: 26px 40px;
   text-decoration: none;
@@ -43,11 +44,12 @@ body {
 }
 
 .active {
-  background-color: deeppink;
+  background-color: #c70039;
 }
 
 .brand{
-	background-color: deeppink;
+	background-color: #ccccc;
+    color: white;
     font-family: fantasy;
     font-size: 30px;
     padding: 18px;
@@ -93,7 +95,7 @@ body {
 }
 
 .grid-container-1 > div {
-  background-color: black;
+  background-color: white;
   text-align: center;
   padding: 20px 0;
   font-size: 30px;
@@ -101,7 +103,7 @@ body {
 
 
 .grid-container-2 > div {
-  background-color:gray;
+  background-color:white;
   text-align: center;
   font-size: 30px;
 }
@@ -133,12 +135,12 @@ width: 100%;
 }
 
 .title{
- text-shadow: 2px 2px 8px black;
+ /*text-shadow: 2px 2px 8px black;*/
   font-size: 20px;
   }
 
 .time{
-    background-color: deeppink;
+    background-color: #c70039;
     color: white;
     font-size: 15px;
     position: absolute;
@@ -190,14 +192,54 @@ i{
   height: 300px;
    position: relative;
   text-align: center;
-  color: white;
+  color: black;
 }
 
 .col:hover{
-  color: deeppink;
+  color: red;
+  text-shadow: 2px 2px 10px black;
 }
 
+.vert_nav ul {
+  text-align: left;
+  font-size: 20px;
+  list-style-type: none;
+  margin: 0;
+  padding: 10px;
+  width: 100%;
+  height: 100%
+  background-color: #f1f1f1;
+}
 
+.vert_nav li a {
+  background-color: rgba(0,0,0,0.1);
+  display: block;
+  color: black;
+  padding: 8px 16px;
+  text-decoration: none;
+}
+
+/* Change the link color on hover */
+.vert_nav li a:hover {
+  background-color: white;
+  color: black;
+}
+
+table{
+  width: 100%;
+  padding: 20px;
+}
+
+td{
+  font-size: 20px;
+  padding: 10px;
+  border-radius: 5px;
+  background-color: rgba(0,0,0,0.1); 
+}
+
+td:hover{
+  background-color: white; 
+}
 /*.col {
     width: 120px;
     min-height: 120px;
@@ -261,14 +303,23 @@ i{
       </div>
   	</div>
   </div>
-  <div class="item2">
-    <ul id="image">
-      <div>Categories</div>
-      <li>Action</li>
-      <li>Adventure</li>
-      <li>Love</li>
-      <li>Mystery</li>
-      <li>Fantasy</li>
+  <div class="item2 vert_nav">
+    Genres
+    <ul>
+      <li><a href="#home"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Action</a></li>
+      <li><a href="#news"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Adventure</a></li>
+      <li><a href="#contact"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Romance</a></li>
+      <li><a href="#about"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Family</a></li>
+      <li><a href="#about"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Mystery</a></li>
+      <li><a href="#about"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Fiction</a></li>
+      <li><a href="#about"><i class="fa fa-caret-right" aria-hidden="true"></i>
+Comedy</a></li>
     </ul>
   </div>
 </div>
@@ -279,36 +330,65 @@ i{
     High Rated Videos
     <div class="grid-container-2">
         <div class="col">
-            <img src="images/t4.jpg">
-              <div class="title">Shazam</div>
+            <img src="images/t5.jpg">
+              <div class="title">Lord Of The Rings</div>
               <div class="time">2:00:00</div>
               <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>9.5</div>
               <div class="quality">1080p</div>
         </div>
         <div class="col">
-            <img src="images/t4.jpg">
-              <div class="title">Shazam</div>
+            <img src="images/t6.jpg">
+              <div class="title">1917</div>
               <div class="time">2:00:00</div>
               <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>9.2</div>
               <div class="quality">1080p</div>
         </div>
         <div class="col">
-            <img src="images/t4.jpg">
-              <div class="title">Shazam</div>
+            <img src="images/t7.jpg">
+              <div class="title">Joker</div>
               <div class="time">2:00:00</div>
               <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>9.0</div>
               <div class="quality">1080p</div>
         </div>
         <div class="col">
-            <img src="images/t4.jpg">
-              <div class="title">Shazam</div>
+            <img src="images/t8.jpg">
+              <div class="title">Logan</div>
               <div class="time">2:00:00</div>
               <div class="rating"><i class="fa fa-star" aria-hidden="true"></i>8.9</div>
               <div class="quality">1080p</div>
         </div>
     </div>
   </div>
-  <div class="item2">2</div>
+  <div class="item2">
+    Years
+    <table>
+      <tr>
+        <td>2019</td>
+        <td>2018</td>
+        <td>2017</td>
+      </tr>
+      <tr>
+        <td>2016</td>
+        <td>2015</td>
+        <td>2014</td>
+      </tr>
+      <tr>
+        <td>2013</td>
+        <td>2012</td>
+        <td>2011</td>
+      </tr>
+      <tr>
+        <td>2010</td>
+        <td>2005</td>
+        <td>2000</td>
+      </tr>
+      <tr>
+        <td>1999</td>
+        <td>1995</td>
+        <td>1990</td>
+      </tr>
+    </table>
+  </div>
 </div>
 </body>
 </html>
